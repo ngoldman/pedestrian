@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title><%= name %></title>
+  <%- css('base') %>
+  <%- js('lib/prefixfree') %>
+</head>
+<body>
+
+  <div class="main container">
+    <% include _nav -%>
+    <% include _errors -%>
+
+    <section class="body">
+      <%- body -%>
+    </section>
+
+    <% include _modals -%>
+  </div>
+
+  <%- js('client') %>
+  <% if (typeof(javascripts) != 'undefined') {
+    javascripts.forEach(function(script) {
+      -%><%- js(script) %><%
+    })
+  } -%>
+
+</body>
+</html>
