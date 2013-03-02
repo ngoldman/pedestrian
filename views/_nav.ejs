@@ -2,40 +2,49 @@
   <div class="navbar-inner">
     <div class="container">
 
-      <a class="brand" href="/"><%= name %> <small><%= version %></small></a>
-      <ul class="nav">
-        <li><a href="#"><i class="icon-leaf"></i> Mario Links</a></li>
-        <li><a href="#"><i class="icon-question-sign"></i> Sonic Links</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="icon-eye-open"></i> Game Videos <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Horse Jeopardy: Worst Game of Year Edition</a>
-              <a href="#">Socks Maze: Horse Quest Bonus Pack</a>
-              <a href="#">Pekoman Blue</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
 
-      <ul class="nav pull-right">
-        <% if (typeof(authenticated) != 'undefined' && authenticated) { %>
+      <a class="brand" href="/"><%= name %> <small><%= version %></small></a>
+
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="#"><i class="icon-leaf"></i> Mario Links</a></li>
+          <li><a href="#"><i class="icon-certificate"></i> Sonic Links</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <strong class="username"><%= currentUser %></strong>
-              <b class="caret"></b>
+              <i class="icon-eye-open"></i> Game Videos <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="/logout">Logout</a></li>
+              <li>
+                <a href="#"><i class="icon-user-md"></i> Horse Doctor: Worst Game of Year Edition</a>
+                <a href="#"><i class="icon-umbrella"></i> Socks Maze: Umbrella Quest Bonus Pack</a>
+                <a href="#"><i class="icon-fighter-jet"></i> Pekoman Blue</a>
+              </li>
             </ul>
           </li>
-        <% } else { %>
-          <li><a href="#login" data-toggle="modal"><i class="icon-lock"></i> Login</a></li>
-          <li><a href="#register" data-toggle="modal"><i class="icon-key"></i> Register</a></li>
-        <% } %>
-      </ul>
+        </ul>
+
+        <ul class="nav pull-right">
+          <% if (typeof(authenticated) != 'undefined' && authenticated) { %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <strong class="username"><%= currentUser %></strong>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
+          <% } else { %>
+            <li><a href="#login" data-toggle="modal"><i class="icon-lock"></i> Login</a></li>
+            <li><a href="#register" data-toggle="modal"><i class="icon-key"></i> Register</a></li>
+          <% } %>
+        </ul>
+      </div>
 
     </div>
   </div>

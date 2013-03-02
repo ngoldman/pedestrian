@@ -1,7 +1,7 @@
-<% if(typeof(messages) != 'undefined' && messages != '') { %>
-  <% String(messages).split(',').forEach(function(message) { %>
+<% if (typeof(messages) != 'undefined' && Object.prototype.toString.call(messages) === '[object Array]') { %>
+  <% messages.forEach(function(message) { %>
     <div class="alert alert-error">
-      <button type="button" class="close" data-dismiss="alert">×</button>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong>Woops!</strong>
       <%= message %>
     </div>

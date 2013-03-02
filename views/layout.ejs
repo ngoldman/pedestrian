@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <title><%= name %></title>
   <%- css('base') %>
+  <!--[if IE 7]>
+  <%- css('lib/font-awesome-ie7') %>
+  <![endif]-->
   <%- js('lib/prefixfree') %>
 </head>
 <body>
 
+  <% include _nav -%>
+
   <div class="main container">
-    <% include _nav -%>
     <% include _errors -%>
 
     <section class="body">
       <%- body -%>
     </section>
-
-    <% include _modals -%>
   </div>
+
+  <% include _modals -%>
 
   <%- js('client') %>
   <% if (typeof(javascripts) != 'undefined') {
