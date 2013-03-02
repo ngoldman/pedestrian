@@ -2,23 +2,17 @@
 
 a humdrum node.js boilerplate of conventionality
 
-## Adequate Edition™
+## Acceptable Edition™
 
-### local
+( express + bootstrap + some basic goodies )
 
-```sh
-$ node app.js
-# or
-$ nodemon
-```
-
-### deploy
+### Get Started
 
 ```sh
-$ jitsu maybe
-$ or heroku
-$ or app fog?
-$ you do it
+$ git clone git@github.com:ngoldman/pedestrian.git
+$ cd pedestrian
+$ npm install
+$ node app.js # or just `nodemon`
 ```
 
 ### License
