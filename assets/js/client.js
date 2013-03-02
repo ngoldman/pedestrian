@@ -5,7 +5,10 @@
 
 (function(window,$,undefined){
 
-  // prepare to get pantsed
-  $('.dropdown-toggle').dropdown();
+  // ( •_•)
+
+  // ( •_•)>⌐■-■
+
+  // (⌐■_■)
 
 })(window,jQuery);
